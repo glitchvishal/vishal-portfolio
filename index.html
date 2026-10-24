@@ -3,327 +3,888 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Vishal Kumar Singh, full-stack developer building GenAI web apps with Next.js, TypeScript , LLM and GenAI.">
-<meta property="og:title" content="Vishal Kumar Singh · Full-Stack Developer">
-<meta property="og:description" content="Experience, projects and contact for Vishal Kumar Singh.">
-<title>Vishal Kumar Singh</title>
+<meta name="description" content="Vishal Kumar Singh — product-minded full-stack engineer building AI-powered web products, generative workflows, analytics, publishing tools, and user-focused interfaces.">
+<meta property="og:title" content="Vishal Kumar Singh · Full-Stack & AI Product Engineer">
+<meta property="og:description" content="Selected work, experience, AI products, and contact information for Vishal Kumar Singh.">
+<title>Vishal Kumar Singh · AI Product Engineer</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
 <style>
-/* Layout: a single reading column with a release-log spine; hero pairs the name with a live "link → post" pipeline from Pub2Post. */
 :root{
-  --bg:#F2F4F1; --surface:#FFFFFF; --fg:#131C18; --muted:#5A6660; --line:#D7DDD8;
-  --accent:#2A55E0; --accent-soft:#E3E9FC; --ok:#1E7A4F;
-  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
-  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --bg:#F2F4F1;
+  --surface:#FFFFFF;
+  --fg:#131C18;
+  --muted:#5A6660;
+  --line:#D7DDD8;
+  --accent:#2A55E0;
+  --accent-soft:#E3E9FC;
+  --ok:#1E7A4F;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0E1412; --surface:#151D1A; --fg:#E3EAE6; --muted:#93A099; --line:#25302C;
-  --accent:#86A2FF; --accent-soft:#1B2547; --ok:#5FD39A; color-scheme:dark}}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1412;
+    --surface:#151D1A;
+    --fg:#E3EAE6;
+    --muted:#93A099;
+    --line:#25302C;
+    --accent:#86A2FF;
+    --accent-soft:#1B2547;
+    --ok:#5FD39A;
+    color-scheme:dark;
+  }
+}
+
 :root[data-theme="dark"]{
-  --bg:#0E1412; --surface:#151D1A; --fg:#E3EAE6; --muted:#93A099; --line:#25302C;
-  --accent:#86A2FF; --accent-soft:#1B2547; --ok:#5FD39A; color-scheme:dark}
- 
+  --bg:#0E1412;
+  --surface:#151D1A;
+  --fg:#E3EAE6;
+  --muted:#93A099;
+  --line:#25302C;
+  --accent:#86A2FF;
+  --accent-soft:#1B2547;
+  --ok:#5FD39A;
+  color-scheme:dark;
+}
+
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
-  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
-.wrap{max-width:1040px;margin:0 auto}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.65;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+
+.wrap{max-width:1080px;margin:0 auto}
+
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
- 
+p{margin-top:0}
+.label{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
 /* nav */
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--line)}
-nav .mark{font-family:var(--mono);font-size:14px;font-weight:500}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  padding-block:22px;
+  border-bottom:1px solid var(--line);
+}
+nav .mark{
+  font-family:var(--mono);
+  font-size:14px;
+  font-weight:500;
+  color:var(--fg);
+  text-decoration:none;
+}
 nav .mark span{color:var(--accent)}
 nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 nav ul a{color:var(--fg);text-decoration:none;font-size:14px}
 nav ul a:hover{color:var(--accent)}
- 
+
 /* hero */
-.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding-block:72px 64px}
+.hero{
+  display:grid;
+  grid-template-columns:1.18fr .92fr;
+  gap:52px;
+  align-items:center;
+  padding-block:76px 66px;
+}
 .hero>*{min-width:0}
-.hero h1{font-size:clamp(44px,8vw,92px);line-height:.95;font-weight:800;letter-spacing:-.03em}
+.hero h1{
+  font-size:clamp(44px,8vw,92px);
+  line-height:.95;
+  font-weight:800;
+  letter-spacing:-.035em;
+}
 .hero h1 em{font-style:normal;color:var(--accent)}
-.hero .role{font-family:var(--mono);font-size:14px;color:var(--muted);margin:0 0 18px}
+.hero .role{
+  font-family:var(--mono);
+  font-size:14px;
+  color:var(--muted);
+  margin:0 0 18px;
+}
 .hero .role b{color:var(--ok);font-weight:500}
-.hero p.lede{font-size:19px;max-width:34ch;margin:24px 0 28px;color:var(--fg)}
+.hero p.lede{
+  font-size:20px;
+  max-width:43ch;
+  margin:24px 0 16px;
+  color:var(--fg);
+}
+.hero p.sublede{
+  max-width:58ch;
+  color:var(--muted);
+  margin-bottom:28px;
+}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{font:500 15px var(--body);padding:11px 18px;border-radius:8px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);text-decoration:none;cursor:pointer}
+.btn{
+  font:500 15px var(--body);
+  padding:11px 18px;
+  border-radius:8px;
+  border:1px solid var(--fg);
+  background:var(--fg);
+  color:var(--bg);
+  text-decoration:none;
+  cursor:pointer;
+}
 .btn.ghost{background:transparent;color:var(--fg)}
 .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
- 
-/* pipeline demo */
-.pipe{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;font-size:14px;box-shadow:0 18px 40px -24px rgba(20,40,30,.35)}
-.pipe .url{font-family:var(--mono);font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 11px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.pipe .url span{color:var(--muted)}
-.steps{display:flex;flex-direction:column;gap:6px;margin:14px 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-.steps div::before{content:"✓ ";color:var(--ok)}
-.post{border:1px solid var(--line);border-radius:10px;padding:14px}
-.post .who{display:flex;gap:10px;align-items:center;margin-bottom:8px}
-.post .av{width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font:600 12px var(--mono)}
-.post .who b{font-size:14px}
-.post .who small{display:block;color:var(--muted);font-size:12px}
-.post p{margin:0 0 10px;line-height:1.5}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{font-family:var(--mono);font-size:11.5px;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
-.pipe .foot{display:flex;justify-content:space-between;margin-top:12px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
- 
-@media (prefers-reduced-motion:no-preference){
-  .steps div{animation:in .5s both}
-  .steps div:nth-child(2){animation-delay:.25s}.steps div:nth-child(3){animation-delay:.5s}
-  .post{animation:in .6s .75s both}
-  @keyframes in{from{opacity:.15;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* system card */
+.system-card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 18px 40px -24px rgba(20,40,30,.35);
 }
- 
+.system-card .card-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+.system-card .status{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--ok);
+}
+.flow{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+}
+.flow-item{
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:12px;
+  align-items:start;
+  padding:11px 0;
+  border-top:1px solid var(--line);
+}
+.flow-item:first-child{border-top:0}
+.flow-num{
+  width:30px;
+  height:30px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  font:500 12px var(--mono);
+  color:var(--accent);
+  background:var(--accent-soft);
+}
+.flow-item b{display:block;font-size:14px;margin-bottom:1px}
+.flow-item small{display:block;color:var(--muted);font-size:12.5px;line-height:1.45}
+.system-card .foot{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font:11.5px var(--mono);
+}
+
 /* sections */
-section{padding-block:56px;border-top:1px solid var(--line)}
-.sec-head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:28px}
-.sec-head h2{font-size:clamp(28px,4vw,40px);font-weight:600;letter-spacing:-.02em}
-.body-col{display:grid;grid-template-columns:200px 1fr;gap:32px}
+section{padding-block:58px;border-top:1px solid var(--line)}
+.sec-head{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:32px;
+  margin-bottom:30px;
+}
+.sec-head h2{
+  font-size:clamp(28px,4vw,42px);
+  font-weight:600;
+  letter-spacing:-.025em;
+}
+.body-col{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:32px;
+}
 .body-col>*{min-width:0}
- 
-.about p{font-size:18px;max-width:62ch;margin:0 0 20px}
+
+/* about */
+.about p{
+  font-size:18px;
+  max-width:68ch;
+  margin:0 0 20px;
+}
+.skill-groups{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:26px;
+}
+.skill-group{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:18px;
+}
+.skill-group h3{
+  font-size:18px;
+  margin-bottom:10px;
+}
 .stack{display:flex;flex-wrap:wrap;gap:8px}
-.stack span{font-family:var(--mono);font-size:13px;padding:6px 11px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
-.stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:28px}
-.stats div{font-family:var(--display);font-size:34px;font-weight:600;line-height:1}
-.stats small{display:block;font-family:var(--body);font-size:13px;color:var(--muted);margin-top:6px;font-weight:400}
- 
+.stack span{
+  font-family:var(--mono);
+  font-size:12.5px;
+  padding:6px 10px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:var(--bg);
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:22px;
+}
+.stat{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:18px;
+}
+.stat strong{
+  display:block;
+  font-family:var(--display);
+  font-size:30px;
+  line-height:1;
+}
+.stat small{
+  display:block;
+  color:var(--muted);
+  margin-top:8px;
+  font-size:13px;
+}
+
+/* projects */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.proj{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+}
+.proj.feature{
+  grid-column:1/-1;
+  border-color:var(--accent);
+  padding:26px;
+}
+.proj .top{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:baseline;
+  flex-wrap:wrap;
+}
+.proj h3{font-size:25px;font-weight:600}
+.proj .when{
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--muted);
+}
+.proj p{margin:0}
+.proj ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.chip{
+  font-family:var(--mono);
+  font-size:11.5px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+.case-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:8px;
+}
+.case-box{
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:15px;
+  background:var(--bg);
+}
+.case-box .label{display:block;margin-bottom:7px}
+.case-box p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.55;
+}
+
 /* experience log */
 .log{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
 .log li{position:relative;padding:0 0 40px 28px}
 .log li:last-child{padding-bottom:0}
-.log li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+.log li::before{
+  content:"";
+  position:absolute;
+  left:-7px;
+  top:7px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:var(--bg);
+  border:2px solid var(--muted);
+}
 .log li.now::before{background:var(--accent);border-color:var(--accent)}
-.log .when{font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.log .when{
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
 .log h3{font-size:22px;font-weight:600;margin:4px 0 2px}
 .log .at{color:var(--muted);font-size:15px;margin-bottom:10px}
 .log .at b{color:var(--fg);font-weight:500}
-.log ul{margin:0;padding-left:18px;max-width:64ch}
+.log ul{margin:0;padding-left:18px;max-width:68ch}
 .log ul li{padding:0 0 6px;position:static}
 .log ul li::before{display:none}
- 
-/* projects */
-.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.proj{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:10px}
-.proj .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
-.proj h3{font-size:24px;font-weight:600}
-.proj .when{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.proj p{margin:0;color:var(--fg)}
-.proj ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
-.proj .tags{margin-top:auto;padding-top:6px}
-.proj.feature{grid-column:1/-1;border-color:var(--accent)}
- 
-/* misc */
-.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+
+/* approach */
+.approach{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.approach article{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:18px;
+}
+.approach h3{font-size:18px;margin:7px 0 5px}
+.approach p{margin:0;color:var(--muted);font-size:14px}
+
+/* education */
+.facts{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
 .facts h3{font-size:18px;font-weight:600;margin:6px 0 4px}
 .facts p{margin:0;color:var(--muted);font-size:15px}
- 
-.contact h2{font-size:clamp(34px,6vw,64px);font-weight:800;letter-spacing:-.03em;line-height:1}
+
+/* contact */
+.contact h2{
+  font-size:clamp(34px,6vw,64px);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1;
+}
+.contact p{
+  max-width:60ch;
+  color:var(--muted);
+  margin-top:18px;
+}
 .mailrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px}
-.mail{font-family:var(--mono);font-size:clamp(15px,2.4vw,20px);padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:var(--surface);user-select:all;word-break:break-all}
+.mail{
+  font-family:var(--mono);
+  font-size:clamp(15px,2.4vw,20px);
+  padding:12px 16px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--surface);
+  user-select:all;
+  word-break:break-all;
+}
 #copy-status{font-family:var(--mono);font-size:13px;color:var(--ok)}
-footer{padding-block:28px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;font-family:var(--mono)}
- 
-@media (max-width:820px){
-  .hero{grid-template-columns:1fr;padding-block:44px}
+
+footer{
+  padding-block:28px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+  font-family:var(--mono);
+}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;padding-block:48px}
   .sec-head,.body-col{grid-template-columns:1fr;gap:10px}
-  .projects,.facts{grid-template-columns:1fr}
+  .projects,.facts,.approach,.skill-groups,.stats,.case-grid{grid-template-columns:1fr}
+  .proj.feature{grid-column:auto}
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .flow-item{animation:in .45s both}
+  .flow-item:nth-child(2){animation-delay:.1s}
+  .flow-item:nth-child(3){animation-delay:.2s}
+  .flow-item:nth-child(4){animation-delay:.3s}
+  @keyframes in{
+    from{opacity:.2;transform:translateY(5px)}
+    to{opacity:1;transform:none}
+  }
 }
 </style>
 </head>
+
 <body>
- 
 <div class="wrap">
+
 <nav>
-  <div class="mark">vishal<span>.dev</span></div>
+  <a class="mark" href="#top">vishal<span>.dev</span></a>
   <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#work">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#approach">Approach</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
- 
-<header class="hero">
+
+<header class="hero" id="top">
   <div>
-    <p class="role">Full-stack developer · <b>● open to opportunities</b></p>
+    <p class="role">Full-stack & AI product engineer · <b>● open to opportunities</b></p>
     <h1>Vishal<br>Kumar <em>Singh</em></h1>
-    <p class="lede">I build web apps where GenAI does real work: turning articles into posts, text into podcasts, and photo dumps into the best shots.</p>
+    <p class="lede">I build AI-powered products that turn complex workflows into simple, useful experiences.</p>
+    <p class="sublede">My work spans product thinking, frontend and backend engineering, generative AI, audio, analytics, social publishing, scheduling, and third-party integrations.</p>
+
     <div class="cta">
-      <a class="btn" href="#projects">See projects</a>
+      <a class="btn" href="#projects">See selected work</a>
       <a class="btn ghost" href="#contact">Get in touch</a>
     </div>
   </div>
- 
-  <div class="pipe" aria-label="Example of Pub2Post turning a web page into a social post">
-    <div class="label" style="margin-bottom:8px">Pub2Post · example run</div>
-    <div class="url"><span>https://</span>journal.example.org/papers/solar-cells-2026</div>
-    <div class="steps">
-      <div>page read · 2,140 words</div>
-      <div>key findings extracted</div>
-      <div>post drafted for LinkedIn</div>
+
+  <div class="system-card" aria-label="Example product workflow from Pub2Post">
+    <div class="card-title">
+      <span class="label">What I like building</span>
+      <span class="status">● shipped products</span>
     </div>
-    <div class="post">
-      <div class="who"><div class="av">VS</div><div><b>Research digest</b><small>Scheduled · Tue 9:00 IST</small></div></div>
-      <p>New research shows perovskite cells holding efficiency far longer in real outdoor tests. Here's what changed and why it matters for rooftop solar.</p>
-      <div class="chips"><span class="chip">#solar</span><span class="chip">#research</span><span class="chip">#cleanenergy</span></div>
+
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-num">01</div>
+        <div>
+          <b>Understand complex input</b>
+          <small>Research papers, articles, documents, images, user-generated content and structured data.</small>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-num">02</div>
+        <div>
+          <b>Apply AI where it creates value</b>
+          <small>Summarization, generation, TTS, classification, transformation and creative assistance.</small>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-num">03</div>
+        <div>
+          <b>Design the workflow around the user</b>
+          <small>Clear states, sensible defaults, retries, scheduling, editing and platform-specific behavior.</small>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-num">04</div>
+        <div>
+          <b>Ship the complete system</b>
+          <small>Frontend, APIs, cloud services, analytics, integrations and the operational details around launch.</small>
+        </div>
+      </div>
     </div>
-    <div class="foot"><span>LinkedIn · X · Facebook</span><span>ready to publish</span></div>
+
+    <div class="foot">
+      <span>product · engineering · AI</span>
+      <span>end-to-end ownership</span>
+    </div>
   </div>
 </header>
- 
+
 <section id="about" class="about">
-  <div class="sec-head"><span class="label">About</span><h2>Accessible, secure interfaces, shipped on deadline.</h2></div>
+  <div class="sec-head">
+    <span class="label">About</span>
+    <h2>I work where product, engineering and AI meet.</h2>
+  </div>
+
   <div class="body-col">
     <span></span>
+
     <div>
-      <p>I'm a detail-oriented web developer with 3 years of experience across startups in the US and India. I work across the stack in Next.js, TypeScript and tRPC, and I like the parts of a product where AI, scheduling and real users meet.</p>
-      <div class="stack">
-        <span>Next.js</span><span>TypeScript</span><span>React</span><span>JavaScript</span><span>tRPC</span><span>Node.js</span><span>Python</span><span>SQL / Prisma</span><span>AWS Lambda</span><span>Firebase</span><span>Tailwind CSS</span><span>GenAI</span>
+      <p>I'm a product-minded full-stack engineer with experience building web products for teams in the US and India. I enjoy taking ambiguous product problems, understanding the user and technical constraints, and turning them into reliable features that can actually ship.</p>
+
+      <p>My strongest work tends to sit at the intersection of AI workflows, content creation, social publishing, analytics, audio, integrations and automation. I care about both the experience users see and the systems that make that experience dependable.</p>
+
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Product & AI</h3>
+          <div class="stack">
+            <span>AI workflows</span>
+            <span>Product thinking</span>
+            <span>UX flows</span>
+            <span>Generative AI</span>
+            <span>Text-to-speech</span>
+            <span>Analytics</span>
+            <span>Automation</span>
+            <span>API integrations</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Engineering</h3>
+          <div class="stack">
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Python</span>
+            <span>tRPC</span>
+            <span>Prisma</span>
+            <span>SQL</span>
+            <span>AWS</span>
+            <span>Firebase</span>
+            <span>Tailwind CSS</span>
+          </div>
+        </div>
       </div>
+
       <div class="stats">
-        <div>3 yrs<small>professional experience</small></div>
-        <div>4<small>companies</small></div>
-        <div>90%<small>AI menu-generation accuracy</small></div>
+        <div class="stat">
+          <strong>3+ yrs</strong>
+          <small>professional product engineering experience</small>
+        </div>
+        <div class="stat">
+          <strong>AI-first</strong>
+          <small>experience across generative content, TTS and automation</small>
+        </div>
+        <div class="stat">
+          <strong>End-to-end</strong>
+          <small>from product requirement to implementation, testing and launch</small>
+        </div>
       </div>
     </div>
   </div>
 </section>
- 
-<section id="work">
-  <div class="sec-head"><span class="label">Experience</span><h2>Where I've worked</h2></div>
+
+<section id="projects">
+  <div class="sec-head">
+    <span class="label">Selected work</span>
+    <h2>Products and systems I've helped build.</h2>
+  </div>
+
+  <div class="projects">
+
+    <article class="proj feature">
+      <div class="top">
+        <h3>Pub2Post</h3>
+        <span class="when">May 2024 – Present</span>
+      </div>
+
+      <p><strong>AI-powered content, publishing and creative workflow platform.</strong> Pub2Post helps users transform research and long-form content into social posts, press content, blogs, graphics, podcasts and other publishable formats—then distribute and measure that content across multiple channels.</p>
+
+      <div class="case-grid">
+        <div class="case-box">
+          <span class="label">Product challenge</span>
+          <p>Keep a large set of AI, publishing, audio and creative tools understandable without exposing the complexity of the systems underneath.</p>
+        </div>
+
+        <div class="case-box">
+          <span class="label">My contribution</span>
+          <p>Built and improved product workflows across social publishing, scheduling, analytics, AI generation, text-to-speech, media processing and third-party integrations.</p>
+        </div>
+
+        <div class="case-box">
+          <span class="label">How I work</span>
+          <p>I collaborate across product, engineering and QA, trace issues through frontend and backend systems, and iterate on flows based on technical constraints and real usage.</p>
+        </div>
+      </div>
+
+      <ul>
+        <li>Built social publishing and scheduling flows across multiple platforms with timezone-safe behavior.</li>
+        <li>Worked on AI-generated audio and podcast experiences, including text-to-speech workflows and voice selection.</li>
+        <li>Built analytics experiences for social engagement and content performance.</li>
+        <li>Handled files such as images, PDFs and documents through AI-driven processing pipelines.</li>
+        <li>Worked on creative integrations that connect generated content with external editing and publishing tools.</li>
+      </ul>
+
+      <div class="tags">
+        <span class="chip">Next.js</span>
+        <span class="chip">GenAI</span>
+        <span class="chip">TTS</span>
+        <span class="chip">AWS</span>
+        <span class="chip">Social APIs</span>
+        <span class="chip">Analytics</span>
+        <span class="chip">Product workflows</span>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="top">
+        <h3>Potopedia</h3>
+        <span class="when">Jun – Aug 2025</span>
+      </div>
+
+      <p>AI photography workflow for event photographers and creators.</p>
+      <ul>
+        <li>Worked with AI-powered photo enhancement, face recognition and best-shot selection.</li>
+        <li>Built engagement analytics for photographers and event owners.</li>
+        <li>Focused on turning large image sets into a simpler review and selection workflow.</li>
+      </ul>
+
+      <div class="tags">
+        <span class="chip">Computer vision</span>
+        <span class="chip">AI workflow</span>
+        <span class="chip">Analytics</span>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="top">
+        <h3>UROAI</h3>
+        <span class="when">Aug – Oct 2025</span>
+      </div>
+
+      <p>Content platform with text-to-speech playback and role-based content management.</p>
+      <ul>
+        <li>Built text-to-speech listening experiences.</li>
+        <li>Implemented role-based access across client and server.</li>
+        <li>Built admin tooling for creating and distributing content.</li>
+      </ul>
+
+      <div class="tags">
+        <span class="chip">TTS</span>
+        <span class="chip">RBAC</span>
+        <span class="chip">CMS</span>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="top">
+        <h3>CogniSigner</h3>
+        <span class="when">Oct 2023</span>
+      </div>
+
+      <p>AI-powered e-signing product that assists with drafting and optimizing agreements between multiple parties.</p>
+
+      <p><a href="https://cognisigner.web.app/" target="_blank" rel="noopener">View project ↗</a></p>
+
+      <div class="tags">
+        <span class="chip">GenAI</span>
+        <span class="chip">Firebase</span>
+        <span class="chip">Document workflow</span>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="top">
+        <h3>Cuisine Captain</h3>
+        <span class="when">2023</span>
+      </div>
+
+      <p>SaaS product for restaurant operations with AI menu planning, forecasting and analytics.</p>
+      <ul>
+        <li>Worked on AI-assisted menu creation.</li>
+        <li>Integrated POS data and Google Analytics for reporting.</li>
+        <li>Built product interfaces around operational and real-time data.</li>
+      </ul>
+
+      <div class="tags">
+        <span class="chip">SaaS</span>
+        <span class="chip">GenAI</span>
+        <span class="chip">Analytics</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="experience">
+  <div class="sec-head">
+    <span class="label">Experience</span>
+    <h2>Where I've worked.</h2>
+  </div>
+
   <div class="body-col">
     <span></span>
+
     <ol class="log">
       <li class="now">
         <div class="when">Oct 2024 – Present</div>
         <h3>Software Developer</h3>
         <div class="at"><b>EditorAIpro</b> · California, USA</div>
         <ul>
-          <li>Built automated post scheduling on AWS Lambda so posts go out at the right time, every time.</li>
-          <li>Integrated multiple social media platforms into Pub2Post to simplify sharing.</li>
-          <li>Built GenAI text-to-voice features that generate podcasts inside Pub2Post.</li>
-          <li>Processed image, PDF and DOC files through GenAI using buffer-based handling.</li>
-          <li>Built a social media calendar with timezone-safe scheduling, platform-aware selection and inline AI post and image editing.</li>
-          <li>Built the analytics dashboard for social media engagement.</li>
+          <li>Build and improve product workflows across AI content generation, audio, social publishing, scheduling, analytics and creative tools.</li>
+          <li>Integrated multiple social platforms and third-party services into Pub2Post.</li>
+          <li>Built generative text-to-voice features for podcast and audio workflows.</li>
+          <li>Worked with image, PDF and document processing through AI systems.</li>
+          <li>Built social scheduling and calendar experiences with timezone-aware behavior and inline AI editing.</li>
+          <li>Contributed across frontend, backend, product requirements, debugging and release validation.</li>
         </ul>
       </li>
+
       <li>
         <div class="when">Oct 2023 – Oct 2024</div>
         <h3>Full-Stack Developer</h3>
         <div class="at"><b>Jobox Hire</b> · Bangalore</div>
         <ul>
-          <li>Built and maintained features for the hiring platform with Next.js, Tailwind CSS, Firebase, tRPC and Prisma.</li>
-          <li>Introduced tRPC for client-server communication, improving responsiveness.</li>
-          <li>Worked with cross-functional teams to turn business requirements into shipped features.</li>
+          <li>Built and maintained product features using Next.js, Tailwind CSS, Firebase, tRPC and Prisma.</li>
+          <li>Introduced tRPC for client-server communication and improved development ergonomics.</li>
+          <li>Worked with cross-functional teams to translate business requirements into shipped features.</li>
         </ul>
       </li>
+
       <li>
         <div class="when">Jun 2023 – Oct 2023</div>
         <h3>Frontend Developer</h3>
         <div class="at"><b>Cuisine Captain</b></div>
         <ul>
-          <li>Led the build of a SaaS web app with real-time analytics, AI menu planning and demand forecasting.</li>
-          <li>Implemented GenAI for menu creation at 90% accuracy.</li>
-          <li>Integrated the POS system and Google Analytics for real-time reporting.</li>
+          <li>Built a SaaS application for real-time analytics, AI menu planning and demand forecasting.</li>
+          <li>Implemented GenAI-assisted menu creation.</li>
+          <li>Integrated POS and analytics services for operational reporting.</li>
         </ul>
       </li>
+
       <li>
         <div class="when">Jan 2023 – May 2023</div>
         <h3>Frontend Developer</h3>
         <div class="at"><b>Inspektlabs</b></div>
         <ul>
-          <li>Built a Flask template for PDF generation, making document generation 20% faster.</li>
-          <li>Worked with the backend team on Python services and SQL data storage.</li>
+          <li>Built a Flask-based PDF generation flow that improved document generation performance.</li>
+          <li>Collaborated with backend engineers on Python services and SQL-based data storage.</li>
         </ul>
       </li>
     </ol>
   </div>
 </section>
- 
-<section id="projects">
-  <div class="sec-head"><span class="label">Projects</span><h2>Things I've built</h2></div>
-  <div class="projects">
-    <article class="proj feature">
-      <div class="top"><h3>Pub2Post</h3><span class="when">May 2024 – Present</span></div>
-      <p>Paste a link and Pub2Post reads the whole page, writes a shareable social post and publishes it straight to your platforms. Built for turning academic and scientific writing into posts people actually read.</p>
-      <div class="chips tags"><span class="chip">Next.js</span><span class="chip">GenAI</span><span class="chip">AWS Lambda</span><span class="chip">Social APIs</span></div>
+
+<section id="approach">
+  <div class="sec-head">
+    <span class="label">How I work</span>
+    <h2>I like owning the path from problem to shipped product.</h2>
+  </div>
+
+  <div class="approach">
+    <article>
+      <span class="label">01</span>
+      <h3>Understand</h3>
+      <p>Start with the user problem, the business goal and the actual constraints before deciding on a solution.</p>
     </article>
-    <article class="proj">
-      <div class="top"><h3>Potopedia</h3><span class="when">Jun – Aug 2025</span></div>
-      <p>AI photography workflow for event photographers and creators.</p>
-      <ul>
-        <li>Custom AI for photo enhancement, face recognition and best-shot selection.</li>
-        <li>Engagement analytics dashboard for photographers and event owners.</li>
-      </ul>
-      <div class="chips tags"><span class="chip">Computer vision</span><span class="chip">Analytics</span></div>
+
+    <article>
+      <span class="label">02</span>
+      <h3>Shape</h3>
+      <p>Break the problem into flows, edge cases, states and technical dependencies before implementation gets expensive.</p>
     </article>
-    <article class="proj">
-      <div class="top"><h3>UROAI</h3><span class="when">Aug – Oct 2025</span></div>
-      <p>Content platform with text-to-speech playback.</p>
-      <ul>
-        <li>Audio player for text-to-speech listening.</li>
-        <li>Role-based access across client and server.</li>
-        <li>Admin CMS for creating and distributing content.</li>
-      </ul>
-      <div class="chips tags"><span class="chip">TTS</span><span class="chip">RBAC</span><span class="chip">CMS</span></div>
+
+    <article>
+      <span class="label">03</span>
+      <h3>Build</h3>
+      <p>Work across frontend, backend and integrations when needed instead of treating the product as isolated screens.</p>
     </article>
-    <article class="proj">
-      <div class="top"><h3>CogniSigner</h3><span class="when">Oct 2023</span></div>
-      <p>AI-powered e-signing platform that drafts and optimizes agreements between multiple parties, cutting negotiation time by 4%.</p>
-      <p><a href="https://cognisigner.web.app/" target="_blank" rel="noopener">cognisigner.web.app ↗</a></p>
-      <div class="chips tags"><span class="chip">GenAI</span><span class="chip">Firebase</span></div>
-    </article>
-    <article class="proj">
-      <div class="top"><h3>Achievements</h3><span class="when">2017</span></div>
-      <p>Google Code-In participant (Sep – Nov 2017).</p>
-      <p style="color:var(--muted)">Certifications: CodeGeeks, United Latino Students Association.</p>
+
+    <article>
+      <span class="label">04</span>
+      <h3>Improve</h3>
+      <p>Use bugs, user friction, analytics and QA findings as inputs for the next product iteration.</p>
     </article>
   </div>
 </section>
- 
+
 <section>
-  <div class="sec-head"><span class="label">Education</span><h2>Background</h2></div>
+  <div class="sec-head">
+    <span class="label">Background</span>
+    <h2>Education and location.</h2>
+  </div>
+
   <div class="facts">
-    <div><span class="label">2019 – 2023</span><h3>B.Tech, Information Technology</h3><p>Techno India College of Technology, Kolkata</p></div>
-    <div><span class="label">2018 – 2019</span><h3>Intermediate</h3><p>Saraswati Vidya Mandir, Munger, Bihar</p></div>
-    <div><span class="label">Based in</span><h3>India · remote-friendly</h3><p>Working with US and Indian teams</p></div>
+    <div>
+      <span class="label">2019 – 2023</span>
+      <h3>B.Tech, Information Technology</h3>
+      <p>Techno India College of Technology, Kolkata</p>
+    </div>
+
+    <div>
+      <span class="label">2018 – 2019</span>
+      <h3>Intermediate</h3>
+      <p>Saraswati Vidya Mandir, Munger, Bihar</p>
+    </div>
+
+    <div>
+      <span class="label">Location</span>
+      <h3>India · remote-friendly</h3>
+      <p>Experience working with distributed teams in the US and India.</p>
+    </div>
   </div>
 </section>
- 
+
 <section id="contact" class="contact">
   <span class="label">Contact</span>
-  <h2 style="margin-top:10px">Let's build something.</h2>
+  <h2 style="margin-top:10px">Let's build something useful.</h2>
+  <p>I'm interested in product engineering, AI-first products, full-stack roles and teams building ambitious software with real user impact.</p>
+
   <div class="mailrow">
     <span class="mail" id="mail">vishalwork.dev@gmail.com</span>
     <button class="btn" id="copy-btn" type="button">Copy email</button>
     <span id="copy-status" aria-live="polite"></span>
   </div>
 </section>
- 
+
 <footer>© 2026 Vishal Kumar Singh</footer>
 </div>
- 
+
 <script>
 document.getElementById('copy-btn').addEventListener('click', function(){
   var text = document.getElementById('mail').textContent.trim();
   var status = document.getElementById('copy-status');
+
   function fallback(){
-    var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
-    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    var r = document.createRange();
+    r.selectNodeContents(document.getElementById('mail'));
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
     status.textContent = 'Selected. Press Ctrl+C to copy';
   }
+
   try {
-    navigator.clipboard.writeText(text).then(function(){ status.textContent = 'Copied'; }, fallback);
-  } catch(e){ fallback(); }
+    navigator.clipboard.writeText(text).then(
+      function(){ status.textContent = 'Copied'; },
+      fallback
+    );
+  } catch(e){
+    fallback();
+  }
 });
 </script>
- 
+
 </body>
 </html>
- 
