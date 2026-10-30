@@ -7,11 +7,15 @@
 <meta property="og:title" content="Vishal Kumar Singh · Full-Stack & AI Product Engineer">
 <meta property="og:description" content="Selected work, experience, AI products, and contact information for Vishal Kumar Singh.">
 <title>Vishal Kumar Singh · AI Product Engineer</title>
-
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#131C18">
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-
+ 
 <style>
 :root{
   --bg:#F2F4F1;
@@ -26,7 +30,7 @@
   --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
-
+ 
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0E1412;
@@ -40,7 +44,7 @@
     color-scheme:dark;
   }
 }
-
+ 
 :root[data-theme="dark"]{
   --bg:#0E1412;
   --surface:#151D1A;
@@ -52,11 +56,11 @@
   --ok:#5FD39A;
   color-scheme:dark;
 }
-
+ 
 *{box-sizing:border-box}
-
+ 
 html{scroll-behavior:smooth}
-
+ 
 body{
   margin:0;
   background:var(--bg);
@@ -67,9 +71,9 @@ body{
   padding-left:max(16px, env(safe-area-inset-left, 0px));
   padding-right:max(16px, env(safe-area-inset-right, 0px));
 }
-
+ 
 .wrap{max-width:1080px;margin:0 auto}
-
+ 
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
@@ -81,7 +85,7 @@ p{margin-top:0}
   text-transform:uppercase;
   color:var(--muted);
 }
-
+ 
 /* nav */
 nav{
   display:flex;
@@ -103,7 +107,7 @@ nav .mark span{color:var(--accent)}
 nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 nav ul a{color:var(--fg);text-decoration:none;font-size:14px}
 nav ul a:hover{color:var(--accent)}
-
+ 
 /* hero */
 .hero{
   display:grid;
@@ -151,7 +155,7 @@ nav ul a:hover{color:var(--accent)}
 }
 .btn.ghost{background:transparent;color:var(--fg)}
 .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-
+ 
 /* system card */
 .system-card{
   background:var(--surface);
@@ -209,7 +213,7 @@ nav ul a:hover{color:var(--accent)}
   color:var(--muted);
   font:11.5px var(--mono);
 }
-
+ 
 /* sections */
 section{padding-block:58px;border-top:1px solid var(--line)}
 .sec-head{
@@ -229,7 +233,7 @@ section{padding-block:58px;border-top:1px solid var(--line)}
   gap:32px;
 }
 .body-col>*{min-width:0}
-
+ 
 /* about */
 .about p{
   font-size:18px;
@@ -285,7 +289,7 @@ section{padding-block:58px;border-top:1px solid var(--line)}
   margin-top:8px;
   font-size:13px;
 }
-
+ 
 /* projects */
 .projects{
   display:grid;
@@ -306,6 +310,8 @@ section{padding-block:58px;border-top:1px solid var(--line)}
   border-color:var(--accent);
   padding:26px;
 }
+/* if the small cards leave one alone in the last row, let it span the full width */
+.projects .proj:not(.feature):last-child:nth-child(even){grid-column:1/-1}
 .proj .top{
   display:flex;
   justify-content:space-between;
@@ -314,6 +320,13 @@ section{padding-block:58px;border-top:1px solid var(--line)}
   flex-wrap:wrap;
 }
 .proj h3{font-size:25px;font-weight:600}
+/* clickable titles */
+.title-link{color:inherit;text-decoration:none;display:inline-flex;align-items:baseline;gap:.3em}
+.title-link .arrow{font-size:.62em;color:var(--accent);transition:transform .15s ease}
+.title-link:hover{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px}
+.title-link:hover .arrow{transform:translate(2px,-2px)}
+.log .at a.title-link b{color:inherit}
+.log .at a.title-link:hover b{color:var(--accent)}
 .proj .when{
   font-family:var(--mono);
   font-size:12px;
@@ -348,7 +361,7 @@ section{padding-block:58px;border-top:1px solid var(--line)}
   color:var(--muted);
   line-height:1.55;
 }
-
+ 
 /* experience log */
 .log{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
 .log li{position:relative;padding:0 0 40px 28px}
@@ -377,7 +390,7 @@ section{padding-block:58px;border-top:1px solid var(--line)}
 .log ul{margin:0;padding-left:18px;max-width:68ch}
 .log ul li{padding:0 0 6px;position:static}
 .log ul li::before{display:none}
-
+ 
 /* approach */
 .approach{
   display:grid;
@@ -392,7 +405,7 @@ section{padding-block:58px;border-top:1px solid var(--line)}
 }
 .approach h3{font-size:18px;margin:7px 0 5px}
 .approach p{margin:0;color:var(--muted);font-size:14px}
-
+ 
 /* education */
 .facts{
   display:grid;
@@ -401,7 +414,7 @@ section{padding-block:58px;border-top:1px solid var(--line)}
 }
 .facts h3{font-size:18px;font-weight:600;margin:6px 0 4px}
 .facts p{margin:0;color:var(--muted);font-size:15px}
-
+ 
 /* contact */
 .contact h2{
   font-size:clamp(34px,6vw,64px);
@@ -426,7 +439,7 @@ section{padding-block:58px;border-top:1px solid var(--line)}
   word-break:break-all;
 }
 #copy-status{font-family:var(--mono);font-size:13px;color:var(--ok)}
-
+ 
 footer{
   padding-block:28px;
   border-top:1px solid var(--line);
@@ -434,14 +447,14 @@ footer{
   font-size:13px;
   font-family:var(--mono);
 }
-
+ 
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;padding-block:48px}
   .sec-head,.body-col{grid-template-columns:1fr;gap:10px}
   .projects,.facts,.approach,.skill-groups,.stats,.case-grid{grid-template-columns:1fr}
   .proj.feature{grid-column:auto}
 }
-
+ 
 @media (prefers-reduced-motion:no-preference){
   .flow-item{animation:in .45s both}
   .flow-item:nth-child(2){animation-delay:.1s}
@@ -454,10 +467,10 @@ footer{
 }
 </style>
 </head>
-
+ 
 <body>
 <div class="wrap">
-
+ 
 <nav>
   <a class="mark" href="#top">vishal<span>.dev</span></a>
   <ul>
@@ -468,27 +481,26 @@ footer{
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <header class="hero" id="top">
   <div>
-    <p class="role">Full-stack & AI product engineer 
-      <!-- · <b>● open to opportunities</b></p> -->
+    <p class="role">Full-stack &amp; AI product engineer<!-- · <b>● open to opportunities</b> --></p>
     <h1>Vishal<br>Kumar <em>Singh</em></h1>
     <p class="lede">I build AI-powered products that turn complex workflows into simple, useful experiences.</p>
     <p class="sublede">My work spans product thinking, frontend and backend engineering, generative AI, audio, analytics, social publishing, scheduling, and third-party integrations.</p>
-
+ 
     <div class="cta">
       <a class="btn" href="#projects">See selected work</a>
       <a class="btn ghost" href="#contact">Get in touch</a>
     </div>
   </div>
-
+ 
   <div class="system-card" aria-label="Example product workflow from Pub2Post">
     <div class="card-title">
       <span class="label">What I like building</span>
       <span class="status">● shipped products</span>
     </div>
-
+ 
     <div class="flow">
       <div class="flow-item">
         <div class="flow-num">01</div>
@@ -497,7 +509,7 @@ footer{
           <small>Research papers, articles, documents, images, user-generated content and structured data.</small>
         </div>
       </div>
-
+ 
       <div class="flow-item">
         <div class="flow-num">02</div>
         <div>
@@ -505,7 +517,7 @@ footer{
           <small>Summarization, generation, TTS, classification, transformation and creative assistance.</small>
         </div>
       </div>
-
+ 
       <div class="flow-item">
         <div class="flow-num">03</div>
         <div>
@@ -513,7 +525,7 @@ footer{
           <small>Clear states, sensible defaults, retries, scheduling, editing and platform-specific behavior.</small>
         </div>
       </div>
-
+ 
       <div class="flow-item">
         <div class="flow-num">04</div>
         <div>
@@ -522,28 +534,28 @@ footer{
         </div>
       </div>
     </div>
-
+ 
     <div class="foot">
       <span>product · engineering · AI</span>
       <span>end-to-end ownership</span>
     </div>
   </div>
 </header>
-
+ 
 <section id="about" class="about">
   <div class="sec-head">
     <span class="label">About</span>
     <h2>I work where product, engineering and AI meet.</h2>
   </div>
-
+ 
   <div class="body-col">
     <span></span>
-
+ 
     <div>
       <p>I'm a product-minded full-stack engineer with experience building web products for teams in the US and India. I enjoy taking ambiguous product problems, understanding the user and technical constraints, and turning them into reliable features that can actually ship.</p>
-
+ 
       <p>My strongest work tends to sit at the intersection of AI workflows, content creation, social publishing, analytics, audio, integrations and automation. I care about both the experience users see and the systems that make that experience dependable.</p>
-
+ 
       <div class="skill-groups">
         <div class="skill-group">
           <h3>Product & AI</h3>
@@ -558,7 +570,7 @@ footer{
             <span>API integrations</span>
           </div>
         </div>
-
+ 
         <div class="skill-group">
           <h3>Engineering</h3>
           <div class="stack">
@@ -577,7 +589,7 @@ footer{
           </div>
         </div>
       </div>
-
+ 
       <div class="stats">
         <div class="stat">
           <strong>3+ yrs</strong>
@@ -595,40 +607,40 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <section id="projects">
   <div class="sec-head">
     <span class="label">Selected work</span>
     <h2>Products and systems I've helped build.</h2>
   </div>
-
+ 
   <div class="projects">
-
+ 
     <article class="proj feature">
       <div class="top">
-        <h3>Pub2Post</h3>
+        <h3><a class="title-link" href="https://www.pub2post.com" target="_blank" rel="noopener">Pub2Post<span class="arrow" aria-hidden="true">↗</span></a></h3>
         <span class="when">May 2024 – Present</span>
       </div>
-
+ 
       <p><strong>AI-powered content, publishing and creative workflow platform.</strong> Pub2Post helps users transform research and long-form content into social posts, press content, blogs, graphics, podcasts and other publishable formats—then distribute and measure that content across multiple channels.</p>
-
+ 
       <div class="case-grid">
         <div class="case-box">
           <span class="label">Product challenge</span>
           <p>Keep a large set of AI, publishing, audio and creative tools understandable without exposing the complexity of the systems underneath.</p>
         </div>
-
+ 
         <div class="case-box">
           <span class="label">My contribution</span>
           <p>Built and improved product workflows across social publishing, scheduling, analytics, AI generation, text-to-speech, media processing and third-party integrations.</p>
         </div>
-
+ 
         <div class="case-box">
           <span class="label">How I work</span>
           <p>I collaborate across product, engineering and QA, trace issues through frontend and backend systems, and iterate on flows based on technical constraints and real usage.</p>
         </div>
       </div>
-
+ 
       <ul>
         <li>Built social publishing and scheduling flows across multiple platforms with timezone-safe behavior.</li>
         <li>Worked on AI-generated audio and podcast experiences, including text-to-speech workflows and voice selection.</li>
@@ -636,7 +648,7 @@ footer{
         <li>Handled files such as images, PDFs and documents through AI-driven processing pipelines.</li>
         <li>Worked on creative integrations that connect generated content with external editing and publishing tools.</li>
       </ul>
-
+ 
       <div class="tags">
         <span class="chip">Next.js</span>
         <span class="chip">GenAI</span>
@@ -647,96 +659,118 @@ footer{
         <span class="chip">Product workflows</span>
       </div>
     </article>
-
+ 
+    <article class="proj">
+      <div class="top">
+        <h3><a class="title-link" href="https://www.joboxhire.com/" target="_blank" rel="noopener">Jobox Hire<span class="arrow" aria-hidden="true">↗</span></a></h3>
+        <span class="when">Oct 2023 – Oct 2024</span>
+      </div>
+ 
+      <p>Staffing and recruitment platform that connects employers with candidates for permanent, temporary and seasonal roles across healthcare, engineering, logistics, finance and more.</p>
+      <ul>
+        <li>Built and maintained product features for the hiring platform using Next.js, Tailwind CSS, Firebase and Prisma.</li>
+        <li>Introduced tRPC for type-safe client-server communication, making the app more responsive and faster to develop.</li>
+        <li>Worked with cross-functional teams to turn recruiting and staffing requirements into shipped features.</li>
+      </ul>
+ 
+      <div class="tags">
+        <span class="chip">Next.js</span>
+        <span class="chip">tRPC</span>
+        <span class="chip">Prisma</span>
+        <span class="chip">Firebase</span>
+        <span class="chip">HR tech</span>
+      </div>
+    </article>
+ 
     <article class="proj">
       <div class="top">
         <h3>Potopedia</h3>
         <span class="when">Jun – Aug 2025</span>
       </div>
-
+ 
       <p>AI photography workflow for event photographers and creators.</p>
       <ul>
         <li>Worked with AI-powered photo enhancement, face recognition and best-shot selection.</li>
         <li>Built engagement analytics for photographers and event owners.</li>
         <li>Focused on turning large image sets into a simpler review and selection workflow.</li>
       </ul>
-
+ 
       <div class="tags">
         <span class="chip">Computer vision</span>
         <span class="chip">AI workflow</span>
         <span class="chip">Analytics</span>
       </div>
     </article>
-
+ 
     <article class="proj">
       <div class="top">
-        <h3>UROAI</h3>
+        <h3><a class="title-link" href="https://uroai.org" target="_blank" rel="noopener">UROAI<span class="arrow" aria-hidden="true">↗</span></a></h3>
         <span class="when">Aug – Oct 2025</span>
       </div>
-
+ 
       <p>Content platform with text-to-speech playback and role-based content management.</p>
       <ul>
         <li>Built text-to-speech listening experiences.</li>
         <li>Implemented role-based access across client and server.</li>
         <li>Built admin tooling for creating and distributing content.</li>
       </ul>
-
+ 
       <div class="tags">
         <span class="chip">TTS</span>
         <span class="chip">RBAC</span>
         <span class="chip">CMS</span>
       </div>
     </article>
-
+ 
     <article class="proj">
       <div class="top">
         <h3>CogniSigner</h3>
         <span class="when">Oct 2023</span>
       </div>
-
+ 
       <p>AI-powered e-signing product that assists with drafting and optimizing agreements between multiple parties.</p>
-
+ 
       <p><a href="https://cognisigner.web.app/" target="_blank" rel="noopener">View project ↗</a></p>
-
+ 
       <div class="tags">
         <span class="chip">GenAI</span>
         <span class="chip">Firebase</span>
         <span class="chip">Document workflow</span>
       </div>
     </article>
-
+ 
     <article class="proj">
       <div class="top">
         <h3>Cuisine Captain</h3>
         <span class="when">2023</span>
       </div>
-
+ 
       <p>SaaS product for restaurant operations with AI menu planning, forecasting and analytics.</p>
       <ul>
         <li>Worked on AI-assisted menu creation.</li>
         <li>Integrated POS data and Google Analytics for reporting.</li>
         <li>Built product interfaces around operational and real-time data.</li>
       </ul>
-
+ 
       <div class="tags">
         <span class="chip">SaaS</span>
         <span class="chip">GenAI</span>
         <span class="chip">Analytics</span>
       </div>
     </article>
-
+ 
   </div>
 </section>
-
+ 
 <section id="experience">
   <div class="sec-head">
     <span class="label">Experience</span>
     <h2>Where I've worked.</h2>
   </div>
-
+ 
   <div class="body-col">
     <span></span>
-
+ 
     <ol class="log">
       <li class="now">
         <div class="when">Oct 2024 – Present</div>
@@ -751,18 +785,18 @@ footer{
           <li>Contributed across frontend, backend, product requirements, debugging and release validation.</li>
         </ul>
       </li>
-
+ 
       <li>
         <div class="when">Oct 2023 – Oct 2024</div>
         <h3>Full-Stack Developer</h3>
-        <div class="at"><b>Jobox Hire</b> · Bangalore</div>
+        <div class="at"><a class="title-link" href="https://www.joboxhire.com/" target="_blank" rel="noopener"><b>Jobox Hire</b><span class="arrow" aria-hidden="true">↗</span></a> · Bangalore</div>
         <ul>
           <li>Built and maintained product features using Next.js, Tailwind CSS, Firebase, tRPC and Prisma.</li>
           <li>Introduced tRPC for client-server communication and improved development ergonomics.</li>
           <li>Worked with cross-functional teams to translate business requirements into shipped features.</li>
         </ul>
       </li>
-
+ 
       <li>
         <div class="when">Jun 2023 – Oct 2023</div>
         <h3>Frontend Developer</h3>
@@ -773,7 +807,7 @@ footer{
           <li>Integrated POS and analytics services for operational reporting.</li>
         </ul>
       </li>
-
+ 
       <li>
         <div class="when">Jan 2023 – May 2023</div>
         <h3>Frontend Developer</h3>
@@ -786,32 +820,32 @@ footer{
     </ol>
   </div>
 </section>
-
+ 
 <section id="approach">
   <div class="sec-head">
     <span class="label">How I work</span>
     <h2>I like owning the path from problem to shipped product.</h2>
   </div>
-
+ 
   <div class="approach">
     <article>
       <span class="label">01</span>
       <h3>Understand</h3>
       <p>Start with the user problem, the business goal and the actual constraints before deciding on a solution.</p>
     </article>
-
+ 
     <article>
       <span class="label">02</span>
       <h3>Shape</h3>
       <p>Break the problem into flows, edge cases, states and technical dependencies before implementation gets expensive.</p>
     </article>
-
+ 
     <article>
       <span class="label">03</span>
       <h3>Build</h3>
       <p>Work across frontend, backend and integrations when needed instead of treating the product as isolated screens.</p>
     </article>
-
+ 
     <article>
       <span class="label">04</span>
       <h3>Improve</h3>
@@ -819,26 +853,26 @@ footer{
     </article>
   </div>
 </section>
-
+ 
 <section>
   <div class="sec-head">
     <span class="label">Background</span>
     <h2>Education and location.</h2>
   </div>
-
+ 
   <div class="facts">
     <div>
       <span class="label">2019 – 2023</span>
       <h3>B.Tech, Information Technology</h3>
       <p>Techno India College of Technology, Kolkata</p>
     </div>
-
+ 
     <div>
       <span class="label">2018 – 2019</span>
       <h3>Intermediate</h3>
       <p>Saraswati Vidya Mandir, Munger, Bihar</p>
     </div>
-
+ 
     <div>
       <span class="label">Location</span>
       <h3>India · remote-friendly</h3>
@@ -846,27 +880,27 @@ footer{
     </div>
   </div>
 </section>
-
+ 
 <section id="contact" class="contact">
   <span class="label">Contact</span>
   <h2 style="margin-top:10px">Let's build something useful.</h2>
   <p>I'm interested in product engineering, AI-first products, full-stack roles and teams building ambitious software with real user impact.</p>
-
+ 
   <div class="mailrow">
     <span class="mail" id="mail">vishalwork.dev@gmail.com</span>
     <button class="btn" id="copy-btn" type="button">Copy email</button>
     <span id="copy-status" aria-live="polite"></span>
   </div>
 </section>
-
+ 
 <footer>© 2026 Vishal Kumar Singh</footer>
 </div>
-
+ 
 <script>
 document.getElementById('copy-btn').addEventListener('click', function(){
   var text = document.getElementById('mail').textContent.trim();
   var status = document.getElementById('copy-status');
-
+ 
   function fallback(){
     var r = document.createRange();
     r.selectNodeContents(document.getElementById('mail'));
@@ -875,7 +909,7 @@ document.getElementById('copy-btn').addEventListener('click', function(){
     s.addRange(r);
     status.textContent = 'Selected. Press Ctrl+C to copy';
   }
-
+ 
   try {
     navigator.clipboard.writeText(text).then(
       function(){ status.textContent = 'Copied'; },
@@ -886,6 +920,7 @@ document.getElementById('copy-btn').addEventListener('click', function(){
   }
 });
 </script>
-
+ 
 </body>
 </html>
+ 
